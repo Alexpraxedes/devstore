@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.magnify {
+  @apply absolute bg-no-repeat border-2 border-zinc-200 rounded-full hidden;
+  background-position: center;
+  background-size: 800%;
+  pointer-events: none;
+  height: 200px;
+  width: 200px;
+
+  transform: scale(0);
+  animation: scale-up 0.3s ease forwards;
+}
+
+@keyframes scale-up {
+  0% {
+    transform: scale(0);
+  }
+  90% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
